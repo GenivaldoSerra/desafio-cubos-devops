@@ -7,6 +7,7 @@
   "author": "Cubos DevOps",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "pg": "^8.11.3"
   }
 }

@@ -1,10 +1,14 @@
 import http from 'http';
 import PG from 'pg';
+import dotenv from 'dotenv';
 
-const port = Number(process.env.port);
+dotenv.config();
+
+const port = Number(process.env.PORT);
 
 const client = new PG.Client(
-    `postgres://${user}:${pass}@${host}:${db_port}`
+    //`postgres://${user}:${pass}@${host}:${db_port}` linha com erro, pois falta o nome do banco de dados no final da string de conexão
+    `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
 );
 
 let successfulConnection = false;
