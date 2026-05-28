@@ -1,0 +1,61 @@
+services:
+  postgres:
+    image: postgres:15.8
+    container_name: postgres
+
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: cubos_devops
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/script.sql:/docker-entrypoint-initdb.d/script.sql
+
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: backend
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      PORT: 3000
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: cubos_devops
+
+    depends_on:
+      - postgres
+
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+
+    container_name: frontend
+
+    ports:
+      - "5500:80"
+
+    depends_on:
+      - backend
+
+    restart: always
+
+volumes:
+  postgres_data:
+
+networks:
+  devops-network:
+    name: devops-network
