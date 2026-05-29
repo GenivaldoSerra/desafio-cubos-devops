@@ -370,7 +370,7 @@ git --version
 
 ---
 
-# 1. Clone o repositório
+## 1. Clone o repositório
 
 ```bash
 git clone https://github.com/GenivaldoSerra/desafio-cubos-devops.git
@@ -378,7 +378,7 @@ git clone https://github.com/GenivaldoSerra/desafio-cubos-devops.git
 
 ---
 
-# 2. Acesse o diretório do projeto
+## 2. Acesse o diretório do projeto
 
 ```bash
 cd desafio-cubos-devops
@@ -386,7 +386,7 @@ cd desafio-cubos-devops
 
 ---
 
-# 3. Estrutura do Terraform
+## 3. Estrutura do Terraform
 
 O projeto possui um arquivo de exemplo:
 
@@ -398,7 +398,7 @@ Esse arquivo contém as variáveis utilizadas pelo Terraform para provisionament
 
 ---
 
-# 4. Criar arquivo `terraform.tfvars`
+## 4. Criar arquivo `terraform.tfvars`
 
 Acesse a pasta do Terraform:
 
@@ -408,13 +408,13 @@ cd terraform
 
 Copie o arquivo de exemplo:
 
-## Linux/macOS
+### Linux/macOS
 
 ```bash
 cp terraform.tfvars.example terraform.tfvars
 ```
 
-## Windows PowerShell
+### Windows PowerShell
 
 ```powershell
 Copy-Item terraform.tfvars.example terraform.tfvars
@@ -422,7 +422,7 @@ Copy-Item terraform.tfvars.example terraform.tfvars
 
 ---
 
-# 5. Editar variáveis do Terraform
+## 5. Editar variáveis do Terraform
 
 Abra o arquivo:
 
@@ -447,7 +447,7 @@ As variáveis podem ser utilizadas para:
 
 ---
 
-# 6. Inicializar Terraform
+## 6. Inicializar Terraform
 
 Ainda dentro da pasta `terraform` execute:
 
@@ -463,7 +463,7 @@ Esse comando:
 
 ---
 
-# 7. Validar infraestrutura
+## 7. Validar infraestrutura
 
 ```bash
 terraform validate
@@ -471,7 +471,7 @@ terraform validate
 
 ---
 
-# 8. Visualizar plano de execução
+## 8. Visualizar plano de execução
 
 ```bash
 terraform plan
@@ -486,7 +486,7 @@ Esse comando mostra:
 
 ---
 
-# 9. Provisionar infraestrutura
+## 9. Provisionar infraestrutura
 
 ```bash
 terraform apply -auto-approve
@@ -505,7 +505,7 @@ O Terraform irá provisionar automaticamente:
 
 ---
 
-# 10. Verificar containers
+## 10. Verificar containers
 
 ```bash
 docker ps
@@ -524,7 +524,7 @@ node-exporter
 
 ---
 
-# 11. Destruir infraestrutura
+## 11. Destruir infraestrutura
 
 Para remover toda infraestrutura provisionada:
 
