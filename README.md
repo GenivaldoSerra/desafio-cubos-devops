@@ -366,25 +366,6 @@ git --version
 
 ---
 
-
-# 🔧 Como Executar o Projeto
-
-## 1. Clone o repositório
-
-```bash
-git clone https://github.com/GenivaldoSerra/desafio-cubos-devops.git
-```
-
----
-
-## 2. Acesse a pasta do Terraform
-
-```bash
-cd desafio-cubos-devops/terraform
-```
-
----
-
 # 🔧 Como Executar o Projeto
 
 ---
@@ -392,7 +373,7 @@ cd desafio-cubos-devops/terraform
 # 1. Clone o repositório
 
 ```bash
-git clone <URL_REPOSITORIO>
+git clone https://github.com/GenivaldoSerra/desafio-cubos-devops.git
 ```
 
 ---
