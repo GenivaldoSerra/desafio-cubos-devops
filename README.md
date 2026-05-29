@@ -100,6 +100,272 @@ Antes de iniciar, é necessário possuir instalado:
 * Git
 
 ---
+# ⚙️ Pré-requisitos
+
+Antes de executar o projeto, é necessário possuir as seguintes ferramentas instaladas:
+
+* Docker Desktop
+* Terraform
+* Git
+
+---
+
+# 🪟 Windows
+
+## Instalar Docker Desktop
+
+1. Baixe o instalador oficial:
+
+```text
+https://www.docker.com/products/docker-desktop/
+```
+
+2. Durante a instalação:
+
+* habilite o WSL2
+* reinicie o computador se solicitado
+
+3. Verifique a instalação:
+
+```powershell
+docker --version
+```
+
+---
+
+## Instalar Terraform
+
+1. Baixe o binário oficial:
+
+```text
+https://developer.hashicorp.com/terraform/downloads
+```
+
+2. Extraia o arquivo `.zip`
+
+3. Adicione o executável ao `PATH`
+
+4. Verifique:
+
+```powershell
+terraform --version
+```
+
+---
+
+## Instalar Git
+
+Download oficial:
+
+```text
+https://git-scm.com/download/win
+```
+
+Verifique:
+
+```powershell
+git --version
+```
+
+---
+
+# 🐧 Ubuntu / Linux
+
+## Atualizar repositórios
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+## Instalar Docker
+
+### Remover versões antigas
+
+```bash
+sudo apt remove docker docker-engine docker.io containerd runc
+```
+
+---
+
+### Instalar dependências
+
+```bash
+sudo apt install -y \
+ca-certificates \
+curl \
+gnupg \
+lsb-release
+```
+
+---
+
+### Adicionar chave GPG oficial
+
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
+
+---
+
+### Adicionar repositório Docker
+
+```bash
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
+https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+---
+
+### Instalar Docker Engine
+
+```bash
+sudo apt update
+
+sudo apt install -y \
+docker-ce \
+docker-ce-cli \
+containerd.io \
+docker-buildx-plugin \
+docker-compose-plugin
+```
+
+---
+
+### Adicionar usuário ao grupo docker
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Depois faça logout/login novamente.
+
+---
+
+### Validar instalação
+
+```bash
+docker --version
+docker compose version
+```
+
+---
+
+## Instalar Terraform
+
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+```
+
+---
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com \
+$(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+```
+
+---
+
+```bash
+sudo apt update && sudo apt install terraform -y
+```
+
+---
+
+### Validar instalação
+
+```bash
+terraform --version
+```
+
+---
+
+## Instalar Git
+
+```bash
+sudo apt install git -y
+```
+
+---
+
+### Validar instalação
+
+```bash
+git --version
+```
+
+---
+
+# 🍎 macOS
+
+## Instalar Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+---
+
+## Instalar Docker Desktop
+
+Download oficial:
+
+```text
+https://www.docker.com/products/docker-desktop/
+```
+
+---
+
+### Validar instalação
+
+```bash
+docker --version
+```
+
+---
+
+## Instalar Terraform
+
+```bash
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+```
+
+---
+
+### Validar instalação
+
+```bash
+terraform --version
+```
+
+---
+
+## Instalar Git
+
+```bash
+brew install git
+```
+
+---
+
+### Validar instalação
+
+```bash
+git --version
+```
+
+---
+
 
 # 🔧 Como Executar o Projeto
 
