@@ -44,3 +44,41 @@ variable "FRONTEND_INTERNAL_PORT" {
   description = "Porta interna do frontend"
   default     = 80
 }
+
+# Variáveis para configuração do Grafana, Prometheus e node_exporter
+
+variable "GRAFANA_EXTERNAL_PORT" {
+  type        = number
+  description = "Porta do Grafana"
+  default     = 3001
+}
+
+variable "GRAFANA_INTERNAL_PORT" {
+  type        = number
+  description = "Porta interna do Grafana"
+  default     = 3000
+}
+
+variable "PROMETHEUS_EXTERNAL_PORT" {
+  type        = number
+  description = "Porta do Prometheus"
+  default     = 9090
+}
+
+variable "PROMETHEUS_INTERNAL_PORT" {
+  type        = number
+  description = "Porta interna do Prometheus"
+  default     = 9090
+}
+
+variable "NODE_EXPORTER_EXTERNAL_PORT" {
+  type        = number
+  description = "Porta do Node Exporter"
+  default     = 9100
+}
+
+variable "NODE_EXPORTER_INTERNAL_PORT" {
+  type        = number
+  description = "Porta interna do Node Exporter"
+  default     = 9100
+}
