@@ -753,6 +753,5 @@ terraform destroy -auto-approve
 * Deploy em Cloud
 * Monitoramento da aplicação
 * Alertas no Grafana
-* Reverse Proxy com Nginx
 
 ---
