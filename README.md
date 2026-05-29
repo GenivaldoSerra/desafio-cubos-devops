@@ -90,16 +90,6 @@ desafio-cubos-devops/
 ```
 
 ---
-
-# ⚙️ Pré-requisitos
-
-Antes de iniciar, é necessário possuir instalado:
-
-* Docker
-* Terraform
-* Git
-
----
 # ⚙️ Pré-requisitos
 
 Antes de executar o projeto, é necessário possuir as seguintes ferramentas instaladas:
