@@ -90,16 +90,6 @@ desafio-cubos-devops/
 ```
 
 ---
-
-# ⚙️ Pré-requisitos
-
-Antes de iniciar, é necessário possuir instalado:
-
-* Docker
-* Terraform
-* Git
-
----
 # ⚙️ Pré-requisitos
 
 Antes de executar o projeto, é necessário possuir as seguintes ferramentas instaladas:
@@ -394,11 +384,11 @@ O projeto possui um arquivo de exemplo:
 terraform/terraform.tfvars.example
 ```
 
-Esse arquivo contém as variáveis utilizadas pelo Terraform para provisionamento da infraestrutura.
+Esse arquivo contém as variáveis utilizadas pelo Terraform para provisionamento da infraestrutura, esse arquivo deve ser renomeado para `terraform.tfvars`.
 
 ---
 
-## 4. Criar arquivo `terraform.tfvars`
+## 4. Renomeando o arquivo `terraform.tfvars.example` para `terraform.tfvars`
 
 Acesse a pasta do Terraform:
 
@@ -406,23 +396,21 @@ Acesse a pasta do Terraform:
 cd terraform
 ```
 
-Copie o arquivo de exemplo:
-
 ### Linux/macOS
 
 ```bash
-cp terraform.tfvars.example terraform.tfvars
+mv terraform.tfvars.example terraform.tfvars
 ```
 
 ### Windows PowerShell
 
 ```powershell
-Copy-Item terraform.tfvars.example terraform.tfvars
+Move-Item terraform.tfvars.example terraform.tfvars
 ```
 
 ---
 
-## 5. Editar variáveis do Terraform
+## 5. Editando variáveis do Terraform
 
 Abra o arquivo:
 
