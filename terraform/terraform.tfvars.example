@@ -1,0 +1,19 @@
+# Variáveis para configuração do backend
+DB_HOST      = "postgres"
+DB_PORT      = 5432
+BACKEND_PORT = 3000
+DB_NAME      = "cubos_devops"
+DB_USER      = "admin"
+DB_PASSWORD  = "admin"
+
+# Variáveis para configuração do frontend
+FRONTEND_INTERNAL_PORT = 80
+FRONTEND_EXTERNAL_PORT = 5500
+
+# Variáveis para configuração do Grafana, Prometheus e node_exporter
+GRAFANA_INTERNAL_PORT       = 3000
+GRAFANA_EXTERNAL_PORT       = 3001
+PROMETHEUS_INTERNAL_PORT    = 9090
+PROMETHEUS_EXTERNAL_PORT    = 9090
+NODE_EXPORTER_INTERNAL_PORT = 9100
+NODE_EXPORTER_EXTERNAL_PORT = 9100

@@ -15,16 +15,19 @@ variable "DB_HOST" {
 variable "DB_NAME" {
   type        = string
   description = "Nome do banco de dados PostgreSQL"
+  default     = "cubos_devops"
 }
 
 variable "DB_USER" {
   type        = string
   description = "Usuário do banco de dados PostgreSQL"
+  default     = "admin"
 }
 
 variable "DB_PASSWORD" {
   type        = string
   description = "Senha do banco de dados PostgreSQL"
+  default     = "admin"
 }
 
 variable "BACKEND_PORT" {
